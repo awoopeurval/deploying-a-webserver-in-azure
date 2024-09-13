@@ -1,0 +1,21 @@
+{
+  "if": {
+    "anyOf": [
+      {
+        "field": "tags",
+        "exists": "false"
+      },
+      {
+        "field": "tags",
+        "equals": ""
+      },
+      {
+        "field": "tags",
+        "equals": "{}"
+      }
+    ]
+  },
+  "then": {
+    "effect": "deny"
+  }
+}
